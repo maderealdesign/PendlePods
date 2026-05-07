@@ -67,6 +67,8 @@
             scrollbar-width: none;  /* Firefox */
         }
     </style>
+    <!-- Custom Scripts -->
+    <script src="menu-loader.js"></script>
 </head>
 <body class="font-body text-gray-800 antialiased bg-white">
 <!-- Navigation -->
@@ -787,9 +789,12 @@
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+        if (btn && menu) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                menu.classList.toggle('hidden');
+            });
+        }
     </script>
 
     <script>
