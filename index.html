@@ -103,7 +103,7 @@
                 </div>
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-primary focus:outline-none">
+                    <button id="mobile-menu-btn" onclick="toggleSiteMenu(this)" class="text-gray-600 hover:text-brand-primary focus:outline-none">
                         <i class="ph ph-list text-3xl"></i>
                     </button>
                 </div>
@@ -159,7 +159,7 @@
                 </div>
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-primary focus:outline-none">
+                    <button id="mobile-menu-btn" onclick="toggleSiteMenu(this)" class="text-gray-600 hover:text-brand-primary focus:outline-none">
                         <i class="ph ph-list text-3xl"></i>
                     </button>
                 </div>
@@ -775,6 +775,14 @@
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        // Mobile menu toggle
+        window.toggleSiteMenu = function(button) {
+            const menu = document.getElementById('mobile-menu');
+            if (!menu) return;
+            const hidden = menu.classList.toggle('hidden');
+            button.setAttribute('aria-expanded', String(!hidden));
+        };
+
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
@@ -784,17 +792,6 @@
                 navbar.classList.remove('shadow-md');
             }
         });
-
-        // Mobile menu toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        if (btn && menu) {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                menu.classList.toggle('hidden');
-            });
-        }
     </script>
 
     <script>
