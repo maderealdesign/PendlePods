@@ -1,0 +1,25 @@
+{
+  "name": "pendlepods_work",
+  "version": "1.0.0",
+  "description": "",
+  "main": "menu-loader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maderealdesign/PendlePods.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maderealdesign/PendlePods/issues"
+  },
+  "homepage": "https://github.com/maderealdesign/PendlePods#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.2.4"
+  }
+}
