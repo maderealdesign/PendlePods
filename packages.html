@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Room Pricing & Packages | Pendle Pods Ltd</title>
+    <meta name="description" content="Explore transparent pricing and bespoke garden room packages from Pendle Pods Ltd. Compare our Bronze, Silver, Gold, and Premium tiers to find the perfect outdoor living space for your budget.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#044B36',
+                            secondary: '#A3C671',
+                            light: '#F8F9FA',
+                            dark: '#1A202C'
+                        },
+                        tier: {
+                            bronze: '#CD7F32',
+                            silver: '#9CA3AF',
+                            gold: '#F59E0B',
+                            premium: '#111827'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .form-input {
+            border: none;
+            border-bottom: 2px solid #e5e7eb;
+            border-radius: 0;
+            padding: 0.75rem 0;
+            background: transparent;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-bottom-color: #044B36;
+            box-shadow: none;
+        }
+        /* Custom scrollbar for comparison table */
+        .table-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .table-container::-webkit-scrollbar-track {
+            background: #F8F9FA;
+            border-radius: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #A3C671;
+            border-radius: 4px;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Garden Room Packages and Pricing",
+      "description": "Compare garden room packages including Bronze, Silver, Gold, and Premium bespoke options by Pendle Pods Ltd.",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Bronze Garden Pod",
+            "description": "Functional garden rooms and budget home offices up to £10k."
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Silver Garden Pod",
+            "description": "Comfortable, year-round garden studios from £10k."
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Gold Garden Pod",
+            "description": "Premium living-quality garden spaces from £20k."
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Premium Garden Pod",
+            "description": "Luxury, bespoke garden rooms and annexes from £30k."
+          }
+        ]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Do your prices include installation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all of our package prices are fully inclusive of design, materials, and complete installation on your property by our professional in-house team."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are there any hidden costs not shown in the package tiers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We pride ourselves on transparent pricing. The only additional cost not included in the standard pod price is the main electrical connection from the pod to your house, as this varies greatly depending on the distance and your existing consumer unit. We will quote this exactly during your free site survey."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I mix and match features between tiers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Our tiers serve as a starting guide. If you want a Silver tier size but wish to upgrade to Gold tier aluminum bi-fold doors or premium cedar cladding, we will simply tailor a bespoke quote for you."
+        }
+      }]
+    }
+    </script>
+</head>
+<body class="font-body text-gray-800 antialiased bg-white">
+    <div id="menu-placeholder"></div>
+
+    <main>
+        <section class="relative pt-32 pb-24 md:pt-48 md:pb-32 bg-brand-dark flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="images/photo-garden-room-home-office-exterior.webp" alt="Luxurious Garden Room" class="w-full h-full object-cover object-center opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/90 to-brand-primary/80"></div>
+            </div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-heading font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                    Transparent Pricing. <br><span class="text-brand-secondary">Uncompromising Quality.</span>
+                </h1>
+                <p class="text-xl text-gray-200 mb-10 font-light tracking-wide max-w-3xl mx-auto leading-relaxed">
+                    We believe in clarity from day one. Explore our carefully curated package tiers designed to scale with your ambitions, budget, and lifestyle needs.
+                </p>
+                <div class="flex justify-center">
+                    <a href="#packages" class="bg-brand-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-secondary hover:text-brand-dark transition shadow-xl hover:-translate-y-1 transform flex items-center">
+                        Compare Packages
+                        <i class="ph-bold ph-arrow-down ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-sm font-bold text-brand-secondary uppercase tracking-widest mb-2">Our Approach</h2>
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-6">
+                        We Don't Just Scale Size. We Scale Experience.
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Choosing a garden room shouldn't be confusing. That is why we developed our four distinct package tiers. Whether you require a simple, functional storage studio or a fully self-contained luxury annex with climate control and panoramic glazing, our tiers provide a clear, honest baseline. 
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed font-semibold">
+                        Every single tier—from Bronze to Premium—is built on our signature heavy-duty timber frame methodology, ensuring your investment lasts for decades.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="packages" class="py-24 bg-brand-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    
+                    <div class="bg-white rounded-3xl shadow-md border border-gray-200 overflow-hidden flex flex-col transition hover:shadow-xl group">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="images/photo-wooden-garden-cabin-exterior.webp" alt="Bronze Garden Pod" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6">
+                                <h3 class="text-3xl font-heading font-bold text-white flex items-center gap-2">
+                                    <span class="w-4 h-4 rounded-full bg-tier-bronze shadow-lg"></span> Bronze Pod
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow flex flex-col">
+                            <p class="text-gray-600 mb-6 text-lg">The ideal starting point. Designed for homeowners who need a functional, secure, and weather-tight space without the premium finishes.</p>
+                            <div class="mb-8 p-6 bg-brand-light rounded-2xl border border-gray-100">
+                                <span class="block text-sm text-gray-500 font-bold uppercase tracking-wider mb-1">Guide Price</span>
+                                <span class="text-4xl font-extrabold text-gray-900">Up to £10,000</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-4 text-lg">What's Included:</h4>
+                            <ul class="space-y-4 flex-grow text-gray-600">
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-bronze mt-1 mr-3 text-xl"></i> <strong>Compact Footprint:</strong> Ideal for smaller gardens (e.g., 2m x 2m to 3m x 2m).</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-bronze mt-1 mr-3 text-xl"></i> <strong>Core Construction:</strong> Robust timber framing with basic standard insulation.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-bronze mt-1 mr-3 text-xl"></i> <strong>Glazing:</strong> High-quality single uPVC door and opening window.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-bronze mt-1 mr-3 text-xl"></i> <strong>Interiors:</strong> Clean, unpainted plywood or MDF interior finish.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-bronze mt-1 mr-3 text-xl"></i> <strong>Electrics:</strong> Essential electrical package (1x light switch, 2x double sockets).</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-bronze mt-1 mr-3 text-xl"></i> <strong>Roofing:</strong> 50-year EPDM rubber roof system.</li>
+                            </ul>
+                            <div class="mt-8 pt-6 border-t border-gray-100">
+                                <a href="contact.html?package=bronze" class="block w-full py-4 px-4 bg-white border-2 border-tier-bronze text-tier-bronze font-bold text-center rounded-xl hover:bg-tier-bronze hover:text-white transition shadow-sm">Enquire About Bronze</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl shadow-md border border-gray-200 overflow-hidden flex flex-col transition hover:shadow-xl group">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="images/photo-garden-office-modern-wooden.webp" alt="Silver Garden Pod" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6">
+                                <h3 class="text-3xl font-heading font-bold text-white flex items-center gap-2">
+                                    <span class="w-4 h-4 rounded-full bg-tier-silver shadow-lg"></span> Silver Pod
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow flex flex-col">
+                            <p class="text-gray-600 mb-6 text-lg">A significant step up in comfort. The Silver tier is perfect for a dedicated, year-round home office or creative studio with a polished interior.</p>
+                            <div class="mb-8 p-6 bg-brand-light rounded-2xl border border-gray-100">
+                                <span class="block text-sm text-gray-500 font-bold uppercase tracking-wider mb-1">Guide Price</span>
+                                <span class="text-4xl font-extrabold text-gray-900">From £10,000</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-4 text-lg">What's Included:</h4>
+                            <ul class="space-y-4 flex-grow text-gray-600">
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-silver mt-1 mr-3 text-xl"></i> <strong>Medium Footprint:</strong> More breathing room (up to 4m x 3m).</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-silver mt-1 mr-3 text-xl"></i> <strong>Thermal Upgrade:</strong> Enhanced PIR rigid insulation for winter warmth.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-silver mt-1 mr-3 text-xl"></i> <strong>Glazing:</strong> Premium double-glazed uPVC French doors and windows.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-silver mt-1 mr-3 text-xl"></i> <strong>Interiors:</strong> Fully plastered, smooth finish painted in brilliant white.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-silver mt-1 mr-3 text-xl"></i> <strong>Flooring:</strong> High-quality, durable laminate flooring with skirting boards.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-silver mt-1 mr-3 text-xl"></i> <strong>Electrics:</strong> Extended electrics (LED downlights, multiple sockets).</li>
+                            </ul>
+                            <div class="mt-8 pt-6 border-t border-gray-100">
+                                <a href="contact.html?package=silver" class="block w-full py-4 px-4 bg-white border-2 border-tier-silver text-gray-600 font-bold text-center rounded-xl hover:bg-tier-silver hover:text-white hover:border-transparent transition shadow-sm">Enquire About Silver</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl shadow-2xl border-2 border-tier-gold overflow-hidden flex flex-col transition relative group transform md:-translate-y-4">
+                        <div class="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-yellow-400 via-tier-gold to-yellow-600 z-10"></div>
+                        <div class="absolute top-6 right-6 z-10">
+                            <span class="bg-tier-gold text-brand-dark text-sm font-bold px-4 py-2 rounded-full shadow-lg uppercase tracking-wide">Most Popular</span>
+                        </div>
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="images/photo-garden-room-home-office-exterior.webp" alt="Gold Garden Pod" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6">
+                                <h3 class="text-3xl font-heading font-bold text-white flex items-center gap-2">
+                                    <span class="w-4 h-4 rounded-full bg-tier-gold shadow-lg animate-pulse"></span> Gold Pod
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow flex flex-col bg-gradient-to-b from-white to-orange-50/20">
+                            <p class="text-gray-700 mb-6 text-lg font-medium">Our flagship specification. Unrivalled aesthetics and performance, designed for clients who want a premium extension of their home living space.</p>
+                            <div class="mb-8 p-6 bg-white rounded-2xl border border-tier-gold/30 shadow-sm">
+                                <span class="block text-sm text-tier-gold font-bold uppercase tracking-wider mb-1">Guide Price</span>
+                                <span class="text-4xl font-extrabold text-brand-primary">From £20,000</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-4 text-lg">What's Included:</h4>
+                            <ul class="space-y-4 flex-grow text-gray-700">
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-1 mr-3 text-xl"></i> <strong>Expansive Space:</strong> Large footprints suitable for multi-use (up to ~5m x 4m).</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-1 mr-3 text-xl"></i> <strong>Cladding:</strong> Architecturally striking premium cladding (e.g., Western Red Cedar).</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-1 mr-3 text-xl"></i> <strong>Glazing:</strong> High-end Aluminum bi-fold or sliding doors for seamless indoor/outdoor living.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-1 mr-3 text-xl"></i> <strong>Interiors:</strong> Professional plastering, choice of premium paint colors, and engineered wood flooring.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-1 mr-3 text-xl"></i> <strong>Climate:</strong> Advanced heating solutions (sleek panel heaters or optional underfloor).</li>
+                                <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-1 mr-3 text-xl"></i> <strong>Lighting:</strong> Integrated smart LED lighting design, internal and external.</li>
+                            </ul>
+                            <div class="mt-8 pt-6 border-t border-gray-200">
+                                <a href="contact.html?package=gold" class="block w-full py-4 px-4 bg-brand-primary text-white font-bold text-center rounded-xl hover:bg-brand-secondary hover:text-brand-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">Design Your Gold Pod</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 rounded-3xl shadow-xl border border-gray-800 overflow-hidden flex flex-col transition hover:shadow-2xl group">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="images/photo-modern-garden-room-pool-table-arcade-machine.webp" alt="Premium Garden Pod" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 opacity-80">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-6 left-6">
+                                <h3 class="text-3xl font-heading font-bold text-white flex items-center gap-2">
+                                    <span class="w-4 h-4 rounded-full bg-white shadow-lg"></span> Premium Pod
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow flex flex-col">
+                            <p class="text-gray-300 mb-6 text-lg">The ultimate bespoke luxury. No limits, no compromises. Designed for complex builds, garden annexes, and high-spec entertainment suites.</p>
+                            <div class="mb-8 p-6 bg-black/50 rounded-2xl border border-gray-700">
+                                <span class="block text-sm text-gray-400 font-bold uppercase tracking-wider mb-1">Guide Price</span>
+                                <span class="text-4xl font-extrabold text-white">From £30,000+</span>
+                            </div>
+                            <h4 class="font-bold text-white mb-4 text-lg">What's Included:</h4>
+                            <ul class="space-y-4 flex-grow text-gray-400">
+                                <li class="flex items-start"><i class="ph-fill ph-star text-white mt-1 mr-3 text-xl"></i> <strong>Limitless Design:</strong> Fully custom dimensions, shapes, and architectural layouts.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-star text-white mt-1 mr-3 text-xl"></i> <strong>Advanced Glazing:</strong> Floor-to-ceiling glass, frameless corners, roof lanterns.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-star text-white mt-1 mr-3 text-xl"></i> <strong>Full Facilities:</strong> Integration of plumbing for bathrooms, shower rooms, or custom kitchenettes.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-star text-white mt-1 mr-3 text-xl"></i> <strong>Climate Control:</strong> Split-system air conditioning (heating and cooling).</li>
+                                <li class="flex items-start"><i class="ph-fill ph-star text-white mt-1 mr-3 text-xl"></i> <strong>Smart Tech:</strong> Full smart home integration, hardwired internet, and integrated audio.</li>
+                                <li class="flex items-start"><i class="ph-fill ph-star text-white mt-1 mr-3 text-xl"></i> <strong>Acoustics:</strong> Specialized acoustic insulation for music studios or home cinemas.</li>
+                            </ul>
+                            <div class="mt-8 pt-6 border-t border-gray-800">
+                                <a href="contact.html?package=premium" class="block w-full py-4 px-4 bg-white text-gray-900 font-bold text-center rounded-xl hover:bg-brand-secondary hover:text-white transition shadow-lg hover:-translate-y-1 transform">Book Private Consultation</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-sm font-bold text-brand-secondary uppercase tracking-widest mb-2">Side by Side</h2>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-brand-primary mb-6">
+                        Features Comparison
+                    </h3>
+                    <p class="text-lg text-gray-600">
+                        A detailed breakdown of exactly what you get at every tier level. Remember, every element can be fully customized during the design phase.
+                    </p>
+                </div>
+
+                <div class="table-container overflow-x-auto pb-8 rounded-2xl shadow-sm border border-gray-100">
+                    <table class="w-full min-w-[900px] text-left border-collapse">
+                        <thead>
+                            <tr class="bg-brand-dark text-white font-heading text-lg">
+                                <th class="p-6 font-bold w-1/5 rounded-tl-2xl">Feature</th>
+                                <th class="p-6 font-bold w-1/5 text-tier-bronze border-l border-gray-700">Bronze</th>
+                                <th class="p-6 font-bold w-1/5 text-tier-silver border-l border-gray-700">Silver</th>
+                                <th class="p-6 font-bold w-1/5 text-tier-gold border-l border-gray-700">Gold</th>
+                                <th class="p-6 font-bold w-1/5 text-white border-l border-gray-700 rounded-tr-2xl">Premium</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600">
+                            <tr class="border-b border-gray-100 hover:bg-brand-light transition">
+                                <td class="p-6 font-bold text-gray-900">Foundations</td>
+                                <td class="p-6 border-l border-gray-100">Standard Ground Screws</td>
+                                <td class="p-6 border-l border-gray-100">Standard Ground Screws</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Heavy Duty Screws</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Bespoke Structural System</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 bg-gray-50/50 hover:bg-brand-light transition">
+                                <td class="p-6 font-bold text-gray-900">Insulation (PIR)</td>
+                                <td class="p-6 border-l border-gray-100">Standard (Floor/Roof)</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Full Wrap (Floor/Wall/Roof)</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">High-Spec Thermal Wrap</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Acoustic & Thermal Max</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-brand-light transition">
+                                <td class="p-6 font-bold text-gray-900">Exterior Cladding</td>
+                                <td class="p-6 border-l border-gray-100">Treated Shiplap</td>
+                                <td class="p-6 border-l border-gray-100">Scandinavian Redwood</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Cedar / Composite / Render</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Architectural Bespoke</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 bg-gray-50/50 hover:bg-brand-light transition">
+                                <td class="p-6 font-bold text-gray-900">Doors & Windows</td>
+                                <td class="p-6 border-l border-gray-100">Single uPVC</td>
+                                <td class="p-6 border-l border-gray-100">Double Glazed uPVC French</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Aluminum Bi-Folds / Sliders</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Custom Architectural Glass</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-brand-light transition">
+                                <td class="p-6 font-bold text-gray-900">Interior Walls</td>
+                                <td class="p-6 border-l border-gray-100">Plywood / MDF (Unpainted)</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Plastered & Painted (White)</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Plastered & Custom Colors</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Bespoke Wall Coverings/Panels</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 bg-gray-50/50 hover:bg-brand-light transition">
+                                <td class="p-6 font-bold text-gray-900">Flooring</td>
+                                <td class="p-6 border-l border-gray-100">OSB Board</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Premium Laminate</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Engineered Wood / LVT</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Client Choice</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-brand-light transition">
+                                <td class="p-6 font-bold text-gray-900">Electrical & Lighting</td>
+                                <td class="p-6 border-l border-gray-100">Basic (2 sockets, 1 light)</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Standard (4 sockets, LEDs)</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Smart LED + Ext Lighting</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Full Smart Home + Data</td>
+                            </tr>
+                            <tr class="hover:bg-brand-light transition">
+                                <td class="p-6 font-bold text-gray-900 rounded-bl-2xl">Climate Control</td>
+                                <td class="p-6 border-l border-gray-100">None</td>
+                                <td class="p-6 border-l border-gray-100">Optional Wall Heater</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary">Slimline Panel / Underfloor</td>
+                                <td class="p-6 border-l border-gray-100 font-semibold text-brand-primary rounded-br-2xl">Air Conditioning System</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-brand-light">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-bold text-brand-secondary uppercase tracking-widest mb-2">Clear Answers</h2>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-brand-primary mb-6">
+                        Pricing & Package FAQs
+                    </h3>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                        <h4 class="text-xl font-heading font-bold text-gray-900 flex items-start">
+                            <i class="ph-bold ph-question text-brand-secondary mr-3 mt-1"></i>
+                            Do your prices include installation?
+                        </h4>
+                        <p class="text-gray-600 mt-4 leading-relaxed ml-9">
+                            Yes, all of our package prices are fully inclusive of design, materials, and complete installation on your property by our professional in-house team. The price you are quoted is the price you pay to have the building constructed and finished.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                        <h4 class="text-xl font-heading font-bold text-gray-900 flex items-start">
+                            <i class="ph-bold ph-question text-brand-secondary mr-3 mt-1"></i>
+                            Are there any hidden costs not shown in the package tiers?
+                        </h4>
+                        <p class="text-gray-600 mt-4 leading-relaxed ml-9">
+                            We pride ourselves on transparent pricing. The only additional cost not included in the standard pod price is the main electrical connection from the pod to your house. This is because the cost varies greatly depending on the distance, the routing (e.g., trenching through a lawn vs. lifting a patio), and the state of your existing consumer unit. We will quote this exactly during your free site survey.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                        <h4 class="text-xl font-heading font-bold text-gray-900 flex items-start">
+                            <i class="ph-bold ph-question text-brand-secondary mr-3 mt-1"></i>
+                            Can I mix and match features between tiers?
+                        </h4>
+                        <p class="text-gray-600 mt-4 leading-relaxed ml-9">
+                            Absolutely. Our tiers serve as a starting guide to help you understand price points. If you want a Silver tier sized building but wish to upgrade to Gold tier aluminum bi-fold doors, or you want a Bronze tier shell but with upgraded Silver tier insulation, we will simply tailor a bespoke quote for you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-brand-primary relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+            <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
+                    Ready to Get an Exact Quote?
+                </h2>
+                <p class="text-xl text-brand-light mb-10 font-light max-w-2xl mx-auto">
+                    Book a free, no-obligation site survey today. We will assess your space, discuss your chosen package, and provide a fixed-price quotation.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="bg-white text-brand-primary px-10 py-4 rounded-full font-semibold text-lg hover:bg-brand-secondary hover:text-white transition shadow-xl hover:-translate-y-1 transform">
+                        Book Free Site Survey
+                    </a>
+                    <a href="gallery.html" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition shadow-xl hover:-translate-y-1 transform">
+                        View Our Gallery
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white py-8 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; <span id="year"></span> Pendle Pods Ltd. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="menu-loader.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

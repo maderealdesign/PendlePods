@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendle Pods Ltd | Custom Built Garden Rooms</title>
+    <meta name="description" content="Custom built garden pods built to last. Explore our stunning creations and find the perfect space for your home.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#044B36',   // Deep Forest Green from logo
+                            secondary: '#A3C671', // Light Lime Green from logo
+                            light: '#F8F9FA',
+                            dark: '#1A202C'
+                        },
+                        tier: {
+                            bronze: '#CD7F32',
+                            silver: '#9CA3AF',
+                            gold: '#F59E0B',
+                            premium: '#111827'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styles for Form Inputs matching original design */
+        .form-input {
+            border: none;
+            border-bottom: 2px solid #e5e7eb;
+            border-radius: 0;
+            padding: 0.75rem 0;
+            background: transparent;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-bottom-color: #044B36;
+            box-shadow: none;
+        }
+
+        /* Hide scrollbar for horizontal slider */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 antialiased bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#">
+                        <img class="h-12 w-auto object-contain" src="images/Logo.png" alt="Pendle Pods Ltd Logo">
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-gray-600 hover:text-brand-primary font-medium transition">About</a>
+                    <a href="#gallery" class="text-gray-600 hover:text-brand-primary font-medium transition">Gallery</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-brand-primary font-medium transition">Packages</a>
+                    <a href="#services" class="text-gray-600 hover:text-brand-primary font-medium transition">Services</a>
+                    <a href="#contact" class="bg-brand-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-opacity-90 transition shadow-md hover:shadow-lg">Get a Quote</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-primary focus:outline-none">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md">About</a>
+                <a href="#gallery" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md">Gallery</a>
+                <a href="#pricing" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md">Packages</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md">Services</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-bold text-brand-primary hover:bg-gray-50 rounded-md">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/photo-garden-room-modern-wood-cladding.webp" alt="Modern Garden Room Exterior" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-black/40"></div> <!-- Dark Overlay -->
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <h1 class="text-5xl md:text-7xl font-heading font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                More Space.<br>Done Right.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 mb-10 font-light tracking-wide drop-shadow-md">
+                Custom built garden pods built to last.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#pricing" class="bg-brand-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-opacity-90 transition shadow-xl hover:-translate-y-1 transform">
+                    View Packages
+                </a>
+                <a href="#gallery" class="bg-white/10 backdrop-blur-md border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-brand-primary transition shadow-xl hover:-translate-y-1 transform">
+                    See Our Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Builder Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Content -->
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-primary mb-6">
+                        Your Trusted Builder
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        At Pendle Pods, we pride ourselves on delivering premium, custom-built garden spaces that transform how you live and work. From initial design to final installation, our dedicated team ensures every detail is perfect, providing a seamless experience and a product built to withstand the test of time.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-brand-primary font-bold text-lg hover:text-brand-secondary transition group">
+                        Get in touch
+                        <i class="ph ph-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Right Grid -->
+                <div class="grid sm:grid-cols-2 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="p-6 bg-brand-light rounded-2xl border border-gray-100 hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-brand-secondary/20 rounded-xl flex items-center justify-center mb-4 text-brand-primary">
+                            <i class="ph ph-diamonds-four text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-brand-primary mb-2">Quality Materials</h3>
+                        <p class="text-sm text-gray-600">We source only the finest timber, insulation, and finishes to ensure your pod is durable and beautiful.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="p-6 bg-brand-light rounded-2xl border border-gray-100 hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-brand-secondary/20 rounded-xl flex items-center justify-center mb-4 text-brand-primary">
+                            <i class="ph ph-shield-check text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-brand-primary mb-2">Built to Last</h3>
+                        <p class="text-sm text-gray-600">Engineered for longevity, our pods feature robust frames and weather-resistant exteriors.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="p-6 bg-brand-light rounded-2xl border border-gray-100 hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-brand-secondary/20 rounded-xl flex items-center justify-center mb-4 text-brand-primary">
+                            <i class="ph ph-users-three text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-brand-primary mb-2">Expert Craftsmanship</h3>
+                        <p class="text-sm text-gray-600">Our experienced carpenters build every pod with precision and care, down to the last screw.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="p-6 bg-brand-light rounded-2xl border border-gray-100 hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-brand-secondary/20 rounded-xl flex items-center justify-center mb-4 text-brand-primary">
+                            <i class="ph ph-map-pin text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-brand-primary mb-2">Local Service</h3>
+                        <p class="text-sm text-gray-600">Based locally, we provide hands-on, personalized service from site survey to completion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW PRICING SECTION: Garden Pod Packages -->
+    <section id="pricing" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-primary mb-4">
+                    Garden Pod Packages
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Find the perfect space for your lifestyle. We don't just scale size—we scale experience, comfort, and aspiration.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Bronze Tier -->
+                <div class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col transition hover:shadow-xl">
+                    <div class="h-48 overflow-hidden relative group">
+                        <img src="images/photo-wooden-garden-cabin-exterior.webp" alt="Bronze Garden Pod" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-tier-bronze tracking-wider uppercase border border-tier-bronze/20">Functional</div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-heading font-bold text-gray-900 mb-1 flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-tier-bronze"></span> Bronze Pod
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-4 h-10">Perfect for simple, functional spaces.</p>
+                        <div class="mb-6">
+                            <span class="text-3xl font-extrabold text-gray-900">Up to £10k</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 flex-grow text-sm text-gray-600">
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> Compact size (e.g. 2m x 2m – 3m x 2m)</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> Basic timber frame construction</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> Standard insulation</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> uPVC door/window</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> Internal plywood or MDF finish</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> Basic electrics (lights + sockets)</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> EPDM rubber roof</li>
+                        </ul>
+                        <div class="mt-auto pt-4 border-t border-gray-100">
+                            <p class="text-xs text-gray-500 mb-4 italic">Best for: storage, hobby rooms, budget home office</p>
+                            <a href="#contact" class="block w-full py-3 px-4 border-2 border-gray-200 text-gray-700 font-semibold text-center rounded-xl hover:border-brand-primary hover:text-brand-primary transition">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silver Tier -->
+                <div class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col transition hover:shadow-xl">
+                    <div class="h-48 overflow-hidden relative group">
+                        <img src="images/photo-garden-office-modern-wooden.webp" alt="Silver Garden Pod" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-gray-600 tracking-wider uppercase border border-gray-300">Comfortable</div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-heading font-bold text-gray-900 mb-1 flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-tier-silver"></span> Silver Pod
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-4 h-10">A step up in comfort and style.</p>
+                        <div class="mb-6">
+                            <span class="text-xl text-gray-500">From</span>
+                            <span class="text-3xl font-extrabold text-gray-900">£10k</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 flex-grow text-sm text-gray-600">
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> Medium size (e.g. up to 4m x 3m)</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> Enhanced insulation for year-round use</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> Double-glazed windows and doors</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> Plastered and painted interior finish</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> Laminate flooring included</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> More electrical options</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-brand-secondary mt-0.5 mr-2"></i> External cladding options</li>
+                        </ul>
+                        <div class="mt-auto pt-4 border-t border-gray-100">
+                            <p class="text-xs text-gray-500 mb-4 italic">Best for: home office, gym, small studio</p>
+                            <a href="#contact" class="block w-full py-3 px-4 border-2 border-gray-200 text-gray-700 font-semibold text-center rounded-xl hover:border-brand-primary hover:text-brand-primary transition">Design Your Pod</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gold Tier (Highlighted) -->
+                <div class="bg-white rounded-3xl shadow-2xl border-2 border-tier-gold overflow-hidden flex flex-col relative transform lg:-translate-y-4">
+                    <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-yellow-400 via-tier-gold to-yellow-600 z-10"></div>
+                    <div class="absolute top-5 right-5 z-10">
+                        <span class="bg-tier-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full shadow-sm uppercase tracking-wide">Most Popular</span>
+                    </div>
+                    <div class="h-48 overflow-hidden relative group">
+                        <img src="images/photo-garden-room-home-office-exterior.webp" alt="Gold Garden Pod" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-tier-gold tracking-wider uppercase shadow-sm">Aspirational</div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col bg-gradient-to-b from-white to-orange-50/30">
+                        <h3 class="text-2xl font-heading font-bold text-gray-900 mb-1 flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-tier-gold animate-pulse"></span> Gold Pod
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-4 h-10">Premium living-quality space.</p>
+                        <div class="mb-6">
+                            <span class="text-xl text-gray-500">From</span>
+                            <span class="text-4xl font-extrabold text-brand-primary">£20k</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 flex-grow text-sm text-gray-700 font-medium">
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-0.5 mr-2 text-lg"></i> Larger footprint (up to ~5m x 4m)</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-0.5 mr-2 text-lg"></i> High-spec insulation (all seasons)</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-0.5 mr-2 text-lg"></i> Aluminium bi-fold or sliding doors</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-0.5 mr-2 text-lg"></i> Fully plastered & decorated interior</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-0.5 mr-2 text-lg"></i> Engineered flooring/premium finishes</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-0.5 mr-2 text-lg"></i> Integrated lighting design</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-0.5 mr-2 text-lg"></i> Stylish exterior cladding</li>
+                            <li class="flex items-start"><i class="ph-fill ph-check-circle text-tier-gold mt-0.5 mr-2 text-lg"></i> Optional heating (panel or underfloor)</li>
+                        </ul>
+                        <div class="mt-auto pt-4 border-t border-gray-200">
+                            <p class="text-xs text-gray-600 mb-4 italic font-medium">Best for: full-time office, guest room, creative studio</p>
+                            <a href="#contact" class="block w-full py-4 px-4 bg-brand-primary text-white font-bold text-center rounded-xl hover:bg-opacity-90 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Design Your Gold Pod</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Tier -->
+                <div class="bg-gray-900 rounded-3xl shadow-xl border border-gray-800 overflow-hidden flex flex-col transition">
+                    <div class="h-48 overflow-hidden relative group">
+                        <img src="images/photo-modern-garden-room-pool-table-arcade-machine.webp" alt="Premium Garden Pod Interior" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-white tracking-wider uppercase border border-gray-600">Luxury</div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-heading font-bold text-white mb-1 flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-white"></span> Premium Pod
+                        </h3>
+                        <p class="text-sm text-gray-400 mb-4 h-10">Luxury bespoke garden room.</p>
+                        <div class="mb-6 text-white">
+                            <span class="text-xl text-gray-400">From</span>
+                            <span class="text-3xl font-extrabold">£30k+</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 flex-grow text-sm text-gray-300">
+                            <li class="flex items-start"><i class="ph-fill ph-star text-white mt-0.5 mr-2"></i> Fully custom size and layout</li>
+                            <li class="flex items-start"><i class="ph-fill ph-star text-white mt-0.5 mr-2"></i> Architectural design options</li>
+                            <li class="flex items-start"><i class="ph-fill ph-star text-white mt-0.5 mr-2"></i> Floor-to-ceiling / corner glazing</li>
+                            <li class="flex items-start"><i class="ph-fill ph-star text-white mt-0.5 mr-2"></i> High-end materials throughout</li>
+                            <li class="flex items-start"><i class="ph-fill ph-star text-white mt-0.5 mr-2"></i> Smart lighting & electrics</li>
+                            <li class="flex items-start"><i class="ph-fill ph-star text-white mt-0.5 mr-2"></i> Full climate control options</li>
+                            <li class="flex items-start"><i class="ph-fill ph-star text-white mt-0.5 mr-2"></i> Premium cladding (cedar, etc.)</li>
+                            <li class="flex items-start"><i class="ph-fill ph-star text-white mt-0.5 mr-2"></i> Extras: bathroom, kitchenette</li>
+                        </ul>
+                        <div class="mt-auto pt-4 border-t border-gray-800">
+                            <p class="text-xs text-gray-400 mb-4 italic">Best for: luxury workspace, guest suite, rental unit</p>
+                            <a href="#contact" class="block w-full py-3 px-4 bg-white text-gray-900 font-bold text-center rounded-xl hover:bg-gray-100 transition">Book Consultation</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-primary mb-4">
+                    Explore Our Stunning Creations
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Browse our portfolio of completed projects. Each pod is tailored to our clients' unique specifications and lifestyle needs.
+                </p>
+            </div>
+
+            <!-- Gallery Grid: 12 Unique Images -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/photo-garden-room-modern-wooden-design.webp" alt="Modern Wooden Design" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/photo-garden-office-white-blue-trim-backyard.webp" alt="White and Blue Trim Office" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/photo-garden-room-white-exterior.webp" alt="White Exterior Room" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/garden-room-bedroom-exterior.webp" alt="Garden Bedroom" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/photo-garden-room-bar-modern-wood-cladding.webp" alt="Garden Bar" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/photo-workshop-garden-exterior.webp" alt="Workshop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/photo-garden-room-modern-wood-cladding.webp" alt="Modern Wood Cladding" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/photo-wooden-garden-cabin-exterior.webp" alt="Garden Cabin Exterior" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/photo-garden-office-modern-wooden.webp" alt="Modern Wooden Office" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/photo-garden-room-home-office-exterior.webp" alt="Home Office Exterior" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/photo-modern-garden-room-pool-table-arcade-machine.webp" alt="Modern Arcade Room" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl group relative">
+                    <img src="images/photo-garden-office-wooden-pod-workspace.webp" alt="Wooden Pod Workspace" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-brand-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <i class="ph-bold ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                 <button class="border-2 border-brand-primary text-brand-primary px-8 py-3 rounded-full font-semibold hover:bg-brand-primary hover:text-white transition">Load More Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - HORIZONTAL SWIPE SLIDER -->
+    <section id="services" class="py-24 bg-brand-light overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="mb-12 max-w-3xl">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-primary mb-6">
+                    Our Services
+                </h2>
+                <p class="text-gray-600 text-lg mb-8">
+                    We don't just build boxes; we create purpose-built spaces tailored to your needs. Swipe through to explore what we can build for you.
+                </p>
+                <div class="flex gap-2">
+                    <div class="w-2 h-2 rounded-full bg-brand-primary"></div>
+                    <div class="w-2 h-2 rounded-full bg-brand-secondary"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                </div>
+            </div>
+
+            <!-- Horizontal Swipe Container -->
+            <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
+                
+                <!-- Service Card 1 -->
+                <div class="relative h-[420px] w-[85vw] sm:w-[380px] flex-none snap-center rounded-2xl overflow-hidden group shadow-lg">
+                    <img src="images/photo-garden-office-wooden-pod-workspace.webp" alt="Garden Office Spaces" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-primary/95 via-brand-primary/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 w-full">
+                        <div class="bg-white rounded-xl p-6 shadow-md transform transition duration-300 group-hover:-translate-y-2">
+                            <h3 class="text-xl font-heading font-bold text-brand-primary mb-2">Garden Office Spaces</h3>
+                            <p class="text-sm text-gray-600">Create a warm, professional workspace at home — fully insulated, private, and designed for year-round use.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="relative h-[420px] w-[85vw] sm:w-[380px] flex-none snap-center rounded-2xl overflow-hidden group shadow-lg">
+                    <img src="images/photo-garden-room-bar-modern-wood-cladding.webp" alt="Garden Bar Areas" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-secondary/95 via-brand-secondary/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 w-full">
+                        <div class="bg-white rounded-xl p-6 shadow-md transform transition duration-300 group-hover:-translate-y-2">
+                            <h3 class="text-xl font-heading font-bold text-brand-primary mb-2">Garden Bar Areas</h3>
+                            <p class="text-sm text-gray-600">The ultimate place to unwind or host friends. Custom-built with lighting, electrics, and stylish finishes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="relative h-[420px] w-[85vw] sm:w-[380px] flex-none snap-center rounded-2xl overflow-hidden group shadow-lg">
+                    <img src="images/photo-modern-garden-room-pool-table-arcade-machine.webp" alt="Home Gyms & Studios" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/95 via-gray-900/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 w-full">
+                        <div class="bg-white rounded-xl p-6 shadow-md transform transition duration-300 group-hover:-translate-y-2">
+                            <h3 class="text-xl font-heading font-bold text-brand-primary mb-2">Home Gyms & Studios</h3>
+                            <p class="text-sm text-gray-600">Workout or create without limits. Strong floors, plenty of space, and built for comfort in all seasons.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="relative h-[420px] w-[85vw] sm:w-[380px] flex-none snap-center rounded-2xl overflow-hidden group shadow-lg">
+                    <img src="images/photo-garden-room-home-office-exterior.webp" alt="Timber Extensions" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-primary/95 via-brand-primary/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 w-full">
+                        <div class="bg-white rounded-xl p-6 shadow-md transform transition duration-300 group-hover:-translate-y-2">
+                            <h3 class="text-xl font-heading font-bold text-brand-primary mb-2">Timber Extensions</h3>
+                            <p class="text-sm text-gray-600">Add real space and value to your home with high-quality timber builds that blend seamlessly with your property.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="relative h-[420px] w-[85vw] sm:w-[380px] flex-none snap-center rounded-2xl overflow-hidden group shadow-lg">
+                    <img src="images/photo-garden-room-modern-wood-cladding.webp" alt="Garden Rooms" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-secondary/95 via-brand-secondary/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 w-full">
+                        <div class="bg-white rounded-xl p-6 shadow-md transform transition duration-300 group-hover:-translate-y-2">
+                            <h3 class="text-xl font-heading font-bold text-brand-primary mb-2">Garden Rooms</h3>
+                            <p class="text-sm text-gray-600">Perfect for relaxing, hobbies, or extra family space. Warm in winter, cool in summer, and built to last.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="relative h-[420px] w-[85vw] sm:w-[380px] flex-none snap-center rounded-2xl overflow-hidden group shadow-lg">
+                    <img src="images/photo-workshop-garden-exterior.webp" alt="Workshops & Hobby Pods" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/95 via-gray-900/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 w-full">
+                        <div class="bg-white rounded-xl p-6 shadow-md transform transition duration-300 group-hover:-translate-y-2">
+                            <h3 class="text-xl font-heading font-bold text-brand-primary mb-2">Workshops & Hobby Pods</h3>
+                            <p class="text-sm text-gray-600">Built for makers and doers. Durable, secure, and fully customisable for tools, storage, or creative work.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-primary mb-4">
+                    What Our Clients Say
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="flex flex-col">
+                    <img src="images/photo-garden-room-modern-wood-cladding.webp" alt="Project for client" class="w-full h-48 object-cover rounded-xl mb-6 shadow-sm">
+                    <div class="text-brand-primary text-xl mb-4 font-heading font-medium leading-relaxed italic">
+                        "From the first consultation to the final sweep up, the team at Pendle Pods were brilliant. Our new garden office has completely transformed how I work."
+                    </div>
+                    <div class="mt-auto">
+                        <p class="font-bold text-gray-900">- Sarah Jenkins</p>
+                        <p class="text-sm text-gray-500">Colne</p>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="flex flex-col">
+                    <img src="images/photo-garden-office-modern-wooden.webp" alt="Project for client" class="w-full h-48 object-cover rounded-xl mb-6 shadow-sm">
+                    <div class="text-brand-primary text-xl mb-4 font-heading font-medium leading-relaxed italic">
+                        "We wanted a bespoke space for a home gym and cinema room. The finish is exceptional, far exceeding our expectations."
+                    </div>
+                    <div class="mt-auto">
+                        <p class="font-bold text-gray-900">- Mark Davies</p>
+                        <p class="text-sm text-gray-500">Burnley</p>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="flex flex-col">
+                    <img src="images/photo-garden-room-white-exterior.webp" alt="Project for client" class="w-full h-48 object-cover rounded-xl mb-6 shadow-sm">
+                    <div class="text-brand-primary text-xl mb-4 font-heading font-medium leading-relaxed italic">
+                        "Professional, tidy, and incredibly skilled. If you are looking for a garden room, I cannot recommend them highly enough."
+                    </div>
+                    <div class="mt-auto">
+                        <p class="font-bold text-gray-900">- Emily Rose</p>
+                        <p class="text-sm text-gray-500">Clitheroe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Left Text -->
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-primary mb-6">
+                        Get in Touch
+                    </h2>
+                    <p class="text-gray-600 text-lg mb-8">
+                        Ready to start planning your perfect garden space? Fill out the form or use our contact details below. We aim to respond to all inquiries within 24 hours.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="ph-fill ph-envelope-simple text-brand-primary text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email Us</h4>
+                                <a href="mailto:info@pendlepods.co.uk" class="text-gray-600 hover:text-brand-primary transition">info@pendlepods.co.uk</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ph-fill ph-phone text-brand-primary text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Call Us</h4>
+                                <a href="tel:01234567890" class="text-gray-600 hover:text-brand-primary transition">01234 567 890</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="bg-brand-light p-8 md:p-10 rounded-3xl">
+                    <h3 class="text-2xl font-heading font-bold text-brand-primary mb-8">Request a Quote</h3>
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label for="first-name" class="sr-only">First Name</label>
+                                <input type="text" id="first-name" name="first-name" placeholder="First Name *" class="w-full form-input" required>
+                            </div>
+                            <div>
+                                <label for="last-name" class="sr-only">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" placeholder="Last Name" class="w-full form-input">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email Address *" class="w-full form-input" required>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="sr-only">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" class="w-full form-input">
+                        </div>
+
+                        <div>
+                            <label for="interest" class="sr-only">Package Interest</label>
+                            <select id="interest" name="interest" class="w-full form-input text-gray-500">
+                                <option value="" disabled selected>Which Package interests you?</option>
+                                <option value="bronze">Bronze Pod</option>
+                                <option value="silver">Silver Pod</option>
+                                <option value="gold">Gold Pod (Most Popular)</option>
+                                <option value="premium">Premium Pod</option>
+                                <option value="unsure">Not Sure Yet</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." class="w-full form-input resize-none"></textarea>
+                        </div>
+                        
+                        <div class="pt-4 flex items-center justify-between">
+                            <div class="flex gap-2">
+                                <button type="button" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:border-brand-primary hover:text-brand-primary transition">
+                                    <i class="ph ph-arrow-left"></i>
+                                </button>
+                                <button type="button" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:border-brand-primary hover:text-brand-primary transition">
+                                    <i class="ph ph-arrow-right"></i>
+                                </button>
+                            </div>
+                            <button type="submit" class="bg-brand-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition shadow-md">
+                                Submit Request
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; <span id="year"></span> Pendle Pods Ltd. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Simple JS for Navigation and Year -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
